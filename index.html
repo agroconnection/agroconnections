@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Connections</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1c33;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #001d3d;
+      padding: 40px 20px;
+    }
+    header img {
+      max-width: 220px;
+    }
+    h1 {
+      margin-top: 10px;
+      font-size: 1.4em;
+      color: #ffdd00;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    form {
+      background-color: white;
+      color: #000;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    form button:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Imagen de WhatsApp 2025-03-25 a las 13.56.03_840955bf.png" alt="Agro Connections logo">
+    <h1>“Más que un reclutamiento, una conexión confiable”</h1>
+  </header>
+
+  <section id="registro">
+    <h2>Regístrate para formar parte de Agro Connections</h2>
+    <form action="https://formspree.io/f/tu_form_id" method="POST">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" name="nombre" id="nombre" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" name="edad" id="edad" required>
+
+      <label for="perfil">Perfil o experiencia:</label>
+      <textarea name="perfil" id="perfil" rows="3" required></textarea>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" name="telefono" id="telefono" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" name="correo" id="correo" required>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+</body>
+</html>
