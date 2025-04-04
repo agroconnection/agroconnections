@@ -79,6 +79,19 @@
       left: 10px;
       pointer-events: none;
     }
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+    .faq-item h4 {
+      margin: 0.5rem 0;
+    }
+    .testimonial {
+      background: #e0f7fa;
+      padding: 1rem;
+      border-left: 5px solid #00796b;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -91,6 +104,8 @@
       <button onclick="mostrarSeccion('sectores')">Sectores</button>
       <button onclick="mostrarSeccion('galeria')">Galería</button>
       <button onclick="mostrarSeccion('videos')">Videos</button>
+      <button onclick="mostrarSeccion('testimonios')">Testimonios</button>
+      <button onclick="mostrarSeccion('faq')">Preguntas Frecuentes</button>
       <button onclick="mostrarSeccion('registro')">Registro</button>
       <button onclick="mostrarSeccion('contacto')">Contacto</button>
     </nav>
@@ -122,6 +137,34 @@
   <section id="videos" class="tab-content">
     <h2>🎥 Videos</h2>
     <iframe width="400" height="220" src="https://www.youtube.com/embed/VIDEO_ID1"></iframe>
+  </section>
+
+  <section id="testimonios" class="tab-content">
+    <h2>🗣️ Testimonios</h2>
+    <div class="testimonial">
+      <p>“Gracias a Agro Connections pude trabajar en Estados Unidos legalmente y ahorrar para mi familia. Fue una experiencia segura y muy profesional.”</p>
+      <strong>- Juan Martínez, Veracruz</strong>
+    </div>
+    <div class="testimonial">
+      <p>“La atención que recibí antes de viajar fue excelente. Cumplieron lo prometido y ahora tengo un contrato estable.”</p>
+      <strong>- María López, Guanajuato</strong>
+    </div>
+  </section>
+
+  <section id="faq" class="tab-content">
+    <h2>❓ Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h4>¿Necesito visa para trabajar con ustedes?</h4>
+      <p>Sí, pero nosotros te apoyamos en el proceso legal para obtenerla.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿En qué sectores puedo aplicar?</h4>
+      <p>En agricultura, construcción y servicios generales.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Puedo aplicar si no tengo experiencia previa?</h4>
+      <p>Sí, muchos empleadores valoran la disposición y compromiso.</p>
+    </div>
   </section>
 
   <section id="registro" class="tab-content">
