@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header {
+  background-color: #003366;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+header img {
+  max-width: 180px;
+}
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ffcc00;
+}
+main {
+  padding: 20px;
+}
+section {
+  margin: 30px auto;
+  max-width: 800px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+}
+form button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #0066cc;
+}
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.galeria {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galeria img {
+  width: 220px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 28px;
+  background: #25d366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  text-decoration: none;
+}
+#btnSubir {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

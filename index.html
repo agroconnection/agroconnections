@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Connections</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Reclutamos talento mexicano para trabajar legalmente en EE.UU. en sectores agrícola, construcción y servicios.">
+  <meta property="og:title" content="Agro Connections">
+  <meta property="og:description" content="Conectamos talento mexicano con empleos reales en EE.UU.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Agro Connections logo">
+    <h1>“Más que un reclutamiento, una conexión confiable”</h1>
+    <nav>
+      <a href="#registro"><i class="fa fa-user-plus"></i> Registro</a>
+      <a href="#proceso"><i class="fa fa-list"></i> Proceso</a>
+      <a href="#mision"><i class="fa fa-bullseye"></i> Misión</a>
+      <a href="#sectores"><i class="fa fa-briefcase"></i> Sectores</a>
+      <a href="#galeria"><i class="fa fa-image"></i> Galería</a>
+      <a href="#contacto"><i class="fa fa-phone"></i> Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="registro">
+      <h2>Regístrate</h2>
+      <form id="formularioContacto" action="https://formspree.io/f/tu_form_id" method="POST">
+        <label>Nombre:</label><input type="text" name="nombre" required>
+        <label>Edad:</label><input type="number" name="edad" required>
+        <label>Perfil:</label><textarea name="perfil" required></textarea>
+        <label>Teléfono:</label><input type="tel" name="telefono" required>
+        <label>Correo:</label><input type="email" name="correo" required>
+        <button type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+      </form>
+    </section>
+
+    <section id="proceso">
+      <h2>📝 Proceso de Aplicación</h2>
+      <ol>
+        <li>Registro</li>
+        <li>Entrevista</li>
+        <li>Evaluación</li>
+        <li>Documentación</li>
+        <li>Capacitación</li>
+        <li>Viaje</li>
+      </ol>
+    </section>
+
+    <section id="mision">
+      <h2>🌟 Misión y Visión</h2>
+      <p><strong>Misión:</strong> Conectar el talento mexicano con oportunidades laborales legales en EE.UU.</p>
+      <p><strong>Visión:</strong> Ser líderes en reclutamiento internacional con compromiso humano.</p>
+    </section>
+
+    <section id="sectores">
+      <h2>🌾 Sectores</h2>
+      <ul>
+        <li>Agrícola</li>
+        <li>Construcción</li>
+        <li>Servicios Generales</li>
+      </ul>
+    </section>
+
+    <section id="galeria">
+      <h2>📸 Galería</h2>
+      <div class="galeria">
+        <img src="sector-agricola.jpg" alt="Agrícola">
+        <img src="sector-construccion.jpg" alt="Construcción">
+        <img src="sector-servicios.jpg" alt="Servicios">
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>📞 Contáctanos</h2>
+      <p>Tel: 483 119 0497 | 483 688 0020</p>
+      <p>Email: info@agroconnections.mx</p>
+    </section>
+  </main>
+
+  <a href="https://wa.me/524831190497" class="whatsapp" target="_blank" aria-label="Contáctanos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    <p>© 2025 Agro Connections</p>
+  </footer>
+
+  <button id="btnSubir">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
