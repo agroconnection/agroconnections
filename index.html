@@ -3,134 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agro Connections</title>
+  <title>Agro Connections S.A. de C.V.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f8fc;
+    }
+    header {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav button {
+      background-color: #006699;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .tab-content {
+      display: none;
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Agro Connections logo" class="logo">
-    <h1>“Más que un reclutamiento, una conexión confiable”</h1>
+    <h1>Agro Connections S.A. de C.V.</h1>
+    <p>“Más que un reclutamiento, una conexión confiable”</p>
     <nav>
-      <a href="#mision">Misión y Visión</a>
-      <a href="#sectores">Sectores</a>
-      <a href="#galeria">Galería</a>
-      <a href="#videos">Videos</a>
-      <a href="#registro">Registro</a>
-      <a href="#contacto">Contacto</a>
-      <label class="switch"><input type="checkbox" id="themeToggle"><span class="slider"></span></label>
+      <button onclick="mostrarSeccion('mision')">Misión y Visión</button>
+      <button onclick="mostrarSeccion('sectores')">Sectores</button>
+      <button onclick="mostrarSeccion('galeria')">Galería</button>
+      <button onclick="mostrarSeccion('videos')">Videos</button>
+      <button onclick="mostrarSeccion('registro')">Registro</button>
+      <button onclick="mostrarSeccion('contacto')">Contacto</button>
     </nav>
   </header>
 
-  <section id="mision" data-aos="fade-up">
+  <section id="mision" class="tab-content active">
     <h2>🌟 Misión y Visión</h2>
     <h3>Misión</h3>
-    <p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
+    <p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos...</p>
     <h3>Visión</h3>
-    <p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
+    <p>Ser la empresa líder en vinculación laboral internacional...</p>
   </section>
 
-  <section id="sectores" data-aos="fade-up">
+  <section id="sectores" class="tab-content">
     <h2>🌾 Sectores que Atendemos</h2>
     <ul>
-      <li><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</li>
-      <li><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</li>
-      <li><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</li>
-    </ul>
-    <h3>✅ Beneficios para los trabajadores</h3>
-    <ul>
-      <li>Procesos legales y transparentes</li>
-      <li>Contrato formal con empresas estadounidenses</li>
-      <li>Acompañamiento antes, durante y después del viaje</li>
-      <li>Capacitación gratuita</li>
-      <li>Soporte en tu idioma</li>
+      <li><strong>Agrícola:</strong> Siembra, cosecha y empaque...</li>
+      <li><strong>Construcción:</strong> Albañilería, pintura...</li>
+      <li><strong>Servicios Generales:</strong> Limpieza, mantenimiento...</li>
     </ul>
   </section>
 
-  <section id="galeria" data-aos="zoom-in">
-    <h2>📸 Galería de Sectores</h2>
-    <div class="galeria">
-      <img src="sector-agricola.jpg" alt="Sector agrícola">
-      <img src="sector-construccion.jpg" alt="Sector construcción">
-      <img src="sector-servicios.jpg" alt="Sector servicios">
-    </div>
+  <section id="galeria" class="tab-content">
+    <h2>📸 Galería</h2>
+    <img src="sector-agricola.jpg" width="300">
+    <img src="sector-construccion.jpg" width="300">
   </section>
 
-  <section id="videos" data-aos="fade-up">
-    <h2>🎥 Videos Informativos</h2>
-    <div class="galeria">
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <section id="videos" class="tab-content">
+    <h2>🎥 Videos</h2>
+    <iframe width="400" height="220" src="https://www.youtube.com/embed/VIDEO_ID1"></iframe>
   </section>
 
-  <section id="registro" data-aos="fade-up">
-    <h2>📝 Registro de Interesados</h2>
+  <section id="registro" class="tab-content">
+    <h2>📝 Registro</h2>
     <form id="formularioContacto">
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" name="nombre" id="nombre" required>
-      <label for="edad">Edad:</label>
-      <input type="number" name="edad" id="edad" required>
-      <label for="perfil">Perfil o experiencia:</label>
-      <textarea name="perfil" id="perfil" rows="3" required></textarea>
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" name="telefono" id="telefono" required>
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" name="correo" id="correo" required>
-      <button type="submit"><i class="fa fa-paper-plane"></i> Enviar solicitud</button>
+      <input name="nombre" placeholder="Nombre completo" required><br>
+      <input name="edad" type="number" placeholder="Edad" required><br>
+      <textarea name="perfil" placeholder="Perfil o experiencia" required></textarea><br>
+      <input name="telefono" placeholder="Teléfono" required><br>
+      <input name="correo" type="email" placeholder="Correo electrónico" required><br>
+      <button type="submit">Enviar</button>
     </form>
-    <p id="formMensaje" style="display:none; color: green;">✅ Enviado correctamente. Gracias por registrarte.</p>
-    <script>
-      const formulario = document.getElementById("formularioContacto");
-      const mensaje = document.getElementById("formMensaje");
-
-      formulario.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const datos = {
-          nombre: formulario.nombre.value,
-          edad: formulario.edad.value,
-          perfil: formulario.perfil.value,
-          telefono: formulario.telefono.value,
-          correo: formulario.correo.value,
-        };
-
-        try {
-          await fetch("https://script.google.com/a/macros/agroconnections.mx/s/AKfycbwxcC_8EoIZ73vL5qSisZGZOpsdctxlAFbEjTOUqwKQkoSjTxqVTf3M50iJqkVqqoOn/exec", {
-            method: "POST",
-            body: JSON.stringify(datos),
-          });
-
-          formulario.reset();
-          mensaje.style.display = "block";
-        } catch (error) {
-          alert("❌ Hubo un error al enviar el formulario.");
-        }
-      });
-    </script>
+    <p id="formMensaje" style="display:none;color:green">Enviado correctamente.</p>
   </section>
 
-  <section id="contacto">
-    <h2>📞 Contáctanos</h2>
-    <p><strong>Teléfonos:</strong><br>483 119 0497<br>483 688 0020</p>
-    <p><strong>Correo:</strong> info@agroconnections.mx</p>
+  <section id="contacto" class="tab-content">
+    <h2>📞 Contacto</h2>
+    <p>📧 info@agroconnections.mx</p>
+    <p>📞 483 119 0497 / 483 688 0020</p>
   </section>
 
   <footer>
-    <p>© 2025 Agro Connections</p>
+    <p>© 2025 Agro Connections S.A. de C.V.</p>
   </footer>
 
-  <a href="https://wa.me/524831190497" class="whatsapp" target="_blank" aria-label="Contáctanos por WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <button id="btnSubir" title="Volver arriba">↑</button>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-  <script src="script.js"></script>
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
