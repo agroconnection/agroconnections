@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agro Connections S.A. de C.V.</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agro Connections S.A. de C.V.</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="logo.png" rel="icon" type="image/png"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
     html { scroll-behavior: smooth; }
     .sectores-grid {
       display: flex;
@@ -111,112 +112,141 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Agro Connections logo" class="logo">
-    <h1>Agro Connections S.A. de C.V.</h1>
-    <p>“Más que un reclutamiento, una conexión confiable”</p>
-    <nav>
-      <button onclick="mostrarSeccion('mision')">Misión y Visión</button>
-      <button onclick="mostrarSeccion('sectores')">Sectores</button>
-      <button onclick="mostrarSeccion('galeria')">Galería</button>
-      <button onclick="mostrarSeccion('videos')">Videos</button>
-      <button onclick="mostrarSeccion('testimonios')">Testimonios</button>
-      <button onclick="mostrarSeccion('faq')">Preguntas Frecuentes</button>
-      <button onclick="mostrarSeccion('registro')">Registro</button>
-      <button onclick="mostrarSeccion('contacto')">Contacto</button>
-    </nav>
-  </header>
+<header>
+<img alt="Agro Connections logo" class="logo" src="logo.png"/>
+<h1>Agro Connections S.A. de C.V.</h1>
+<p>“Más que un reclutamiento, una conexión confiable”</p>
+<nav>
+<button onclick="mostrarSeccion('mision')">Misión y Visión</button>
+<button onclick="mostrarSeccion('sectores')">Sectores</button>
+<button onclick="mostrarSeccion('galeria')">Galería</button>
+<button onclick="mostrarSeccion('videos')">Videos</button>
+<button onclick="mostrarSeccion('requisitos')">Requisitos</button>
+<button onclick="mostrarSeccion('faq')">Preguntas Frecuentes</button>
+<button onclick="mostrarSeccion('registro')">Registro</button>
+<button onclick="mostrarSeccion('contacto')">Contacto</button>
+<button onclick="mostrarSeccion('proceso')">Etapas del Proceso</button></nav>
+</header>
+<section class="tab-content active" id="mision">
+<h2>🌟 Misión y Visión</h2>
+<h3>MISIÓN</h3>
+<p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
+<h3>VISIÓN</h3>
+<p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
+</section>
+<section class="tab-content" id="sectores">
+<h2>🌾 Sectores que Atendemos</h2>
+<div class="sectores-grid">
+<div>
+<img alt="Sector Agrícola" src="images/sector-agricola.jpg"/>
+<p><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</p>
+</div>
+<div>
+<img alt="Sector Construcción" src="images/sector-construccion.jpg"/>
+<p><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</p>
+</div>
+<div>
+<img alt="Sector Servicios" src="images/sector-servicios.jpg"/>
+<p><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</p>
+</div>
+</div>
+</section>
 
-  <section id="mision" class="tab-content active">
-    <h2>🌟 Misión y Visión</h2>
-    <h3>MISIÓN</h3>
-    <p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
-    <h3>VISIÓN</h3>
-    <p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
-  </section>
+<section class="tab-content" id="galeria">
+  <h2>📸 Galería</h2>
+  <div class="galeria">
+    <img src="images/sector-agricola.jpg" alt="Agrícola">
+    <img src="images/sector-construccion.jpg" alt="Construcción">
+    <img src="images/sector-servicios.jpg" alt="Servicios">
+  </div>
+</section>
 
-  <section id="sectores" class="tab-content">
-    <h2>🌾 Sectores que Atendemos</h2>
-    <div class="sectores-grid">
-      <div>
-        <img src="images/sector-agricola.jpg" alt="Sector Agrícola">
-        <p><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</p>
-      </div>
-      <div>
-        <img src="images/sector-construccion.jpg" alt="Sector Construcción">
-        <p><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</p>
-      </div>
-      <div>
-        <img src="images/sector-servicios.jpg" alt="Sector Servicios">
-        <p><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria" class="tab-content">
-    <h2>📸 Galería</h2>
-    <img src="sector-agricola.jpg" width="300">
-    <img src="sector-construccion.jpg" width="300">
-  </section>
-
-  <section id="videos" class="tab-content">
-    <h2>🎥 Videos</h2>
-    <iframe width="400" height="220" src="https://www.youtube.com/embed/VIDEO_ID1"></iframe>
-  </section>
-
-  <section id="testimonios" class="tab-content">
-    <h2>🗣️ Testimonios</h2>
-    <div class="testimonial">
-      <p>“Gracias a Agro Connections pude trabajar en Estados Unidos legalmente y ahorrar para mi familia. Fue una experiencia segura y muy profesional.”</p>
-      <strong>- Juan Martínez, Veracruz</strong>
-    </div>
-    <div class="testimonial">
-      <p>“La atención que recibí antes de viajar fue excelente. Cumplieron lo prometido y ahora tengo un contrato estable.”</p>
-      <strong>- María López, Guanajuato</strong>
-    </div>
-  </section>
-
-  <section id="faq" class="tab-content">
-    <h2>❓ Preguntas Frecuentes</h2>
-    <div class="faq-item">
-      <h4>¿Necesito visa para trabajar con ustedes?</h4>
-      <p>Sí, pero nosotros te apoyamos en el proceso legal para obtenerla.</p>
-    </div>
-    <div class="faq-item">
-      <h4>¿En qué sectores puedo aplicar?</h4>
-      <p>En agricultura, construcción y servicios generales.</p>
-    </div>
-    <div class="faq-item">
-      <h4>¿Puedo aplicar si no tengo experiencia previa?</h4>
-      <p>Sí, muchos empleadores valoran la disposición y compromiso.</p>
-    </div>
-  </section>
-
-  <section id="registro" class="tab-content">
-    <h2>📝 Registro</h2>
-    <form id="formularioContacto">
-      <input name="nombre" placeholder="Nombre completo" required><br>
-      <input name="edad" type="number" placeholder="Edad" required><br>
-      <textarea name="perfil" placeholder="Perfil o experiencia" required></textarea><br>
-      <input name="telefono" placeholder="Teléfono" required><br>
-      <input name="correo" type="email" placeholder="Correo electrónico" required><br>
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="form-success" id="formMensaje">✅ Tu solicitud fue enviada correctamente.</div>
-  </section>
-
-  <section id="contacto" class="tab-content">
-    <h2>📞 Contacto</h2>
-    <p>📧 info@agroconnections.mx</p>
-    <p>📞 483 119 0497 / 483 688 0020</p>
-  </section>
-
-  <footer>
-    <img src="logo.png" alt="logo de fondo" style="width:60px; opacity:0.3;"><br>
-    <p>© 2025 Agro Connections S.A. de C.V.</p>
-  </footer>
-
-  <script>
+<section class="tab-content" id="videos">
+<h2>🎥 Videos</h2>
+<iframe height="220" src="https://www.youtube.com/embed/VIDEO_ID1" width="400"></iframe>
+</section>
+<section class="tab-content" id="requisitos">
+<h2>📋 Requisitos Generales</h2>
+<ul>
+<li>✅ Ser mayor de 18 años.</li>
+<li>✅ Contar con experiencia previa en el rubro de interés.</li>
+<li>✅ Contar con pasaporte vigente.</li>
+<li>✅ <strong>Certificado Médico Anexado</strong></li>
+<li>✅ <strong>Prueba de Embarazo</strong> (en caso de mujeres)</li>
+<li>✅ <strong>Declaración de Salud:</strong>
+<ul>
+<li>✔ Capacidad para trabajar de pie durante 8 horas.</li>
+<li>✔ Capacidad para levantar hasta 30 libras.</li>
+<li>✔ No presentar enfermedades crónicas.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tab-content" id="proceso">
+<h2>🔄 Etapas del Proceso de Reclutamiento</h2>
+<div class="proceso-container">
+<div class="proceso-etapa">
+<div class="icono">📝</div>
+<h3>Junio a Noviembre</h3>
+<p>Enlistado y selección de candidatos.</p>
+</div>
+<div class="proceso-etapa">
+<div class="icono">📄</div>
+<h3>Diciembre a Enero</h3>
+<p>Entrega de documentación.</p>
+</div>
+<div class="proceso-etapa">
+<div class="icono">🛂</div>
+<h3>Febrero a Abril</h3>
+<p>Visado y contratación.</p>
+</div>
+</div>
+</section>
+<section class="tab-content" id="faq">
+<h2>❓ Preguntas Frecuentes</h2>
+<div class="faq-item">
+<h3>¿Necesito tener experiencia?</h3>
+<p>Sí. Es necesario contar con experiencia previa en el área para asegurar un mejor desempeño y aprovechar los beneficios.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo aplicar si tengo antecedentes en EE.UU.?</h3>
+<p>No. Es indispensable no contar con antecedentes en Estados Unidos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la edad máxima para aplicar?</h3>
+<p>Hasta 55 años.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué tipo de visa necesito?</h3>
+<p>La empresa apoyará el proceso de visado apropiado según la actividad laboral y perfil del trabajador.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué documentos debo tener listos?</h3>
+<p>Pasaporte vigente, certificado médico, prueba de embarazo (en caso de mujeres), y declaración de salud.</p>
+</div>
+</section>
+<section class="tab-content" id="registro">
+<h2>📝 Registro</h2>
+<form id="formularioContacto">
+<input name="nombre" placeholder="Nombre completo" required=""/><br/>
+<input name="edad" placeholder="Edad" required="" type="number"/><br/>
+<textarea name="perfil" placeholder="Perfil o experiencia" required=""></textarea><br/>
+<input name="telefono" placeholder="Teléfono" required=""/><br/>
+<input name="correo" placeholder="Correo electrónico" required="" type="email"/><br/>
+<button type="submit">Enviar</button>
+</form>
+<div class="form-success" id="formMensaje">✅ Tu solicitud fue enviada correctamente.</div>
+</section>
+<section class="tab-content" id="contacto">
+<h2>📞 Contacto</h2>
+<p>📧 info@agroconnections.mx</p>
+<p>📞 483 119 0497 / 483 688 0020</p>
+</section>
+<footer><img alt="Logo Agro Connections" src="images/logo.png" style="max-width: 120px; display: block; margin: auto; margin-bottom: 10px;"/>
+<img alt="logo de fondo" src="logo.png" style="max-width: 180px; display: block; margin: auto;"/><br/>
+<p>© 2025 Agro Connections S.A. de C.V.</p>
+</footer>
+<script>
     function mostrarSeccion(id) {
       document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
@@ -229,5 +259,10 @@
       this.reset();
     });
   </script>
+
+<a class="whatsapp" href="https://wa.me/524831190497" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
