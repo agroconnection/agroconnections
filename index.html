@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    html { scroll-behavior: smooth; }
+    .sectores-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+    }
+    .sectores-grid div {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .sectores-grid img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -121,11 +137,20 @@
 
   <section id="sectores" class="tab-content">
     <h2>🌾 Sectores que Atendemos</h2>
-    <ul>
-      <li><strong>Agrícola:</strong> Siembra, cosecha y empaque...</li>
-      <li><strong>Construcción:</strong> Albañilería, pintura...</li>
-      <li><strong>Servicios Generales:</strong> Limpieza, mantenimiento...</li>
-    </ul>
+    <div class="sectores-grid">
+      <div>
+        <img src="images/sector-agricola.jpg" alt="Sector Agrícola">
+        <p><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</p>
+      </div>
+      <div>
+        <img src="images/sector-construccion.jpg" alt="Sector Construcción">
+        <p><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</p>
+      </div>
+      <div>
+        <img src="images/sector-servicios.jpg" alt="Sector Servicios">
+        <p><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</p>
+      </div>
+    </div>
   </section>
 
   <section id="galeria" class="tab-content">
