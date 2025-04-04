@@ -13,7 +13,8 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f3f8fc;
+      background: #f3f8fc url('logo.png') no-repeat center top;
+      background-size: 120px;
     }
     header {
       background: #003366;
@@ -49,6 +50,7 @@
       padding: 2rem;
       max-width: 960px;
       margin: auto;
+      position: relative;
     }
     .tab-content.active {
       display: block;
@@ -58,6 +60,24 @@
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+    .form-success {
+      display: none;
+      color: green;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .tab-content::after {
+      content: "";
+      background: url('logo.png') no-repeat;
+      background-size: 100px;
+      opacity: 0.05;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -78,10 +98,10 @@
 
   <section id="mision" class="tab-content active">
     <h2>🌟 Misión y Visión</h2>
-    <h3>Misión</h3>
-    <p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos...</p>
-    <h3>Visión</h3>
-    <p>Ser la empresa líder en vinculación laboral internacional...</p>
+    <h3>MISIÓN</h3>
+    <p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
+    <h3>VISIÓN</h3>
+    <p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
   </section>
 
   <section id="sectores" class="tab-content">
@@ -114,7 +134,7 @@
       <input name="correo" type="email" placeholder="Correo electrónico" required><br>
       <button type="submit">Enviar</button>
     </form>
-    <p id="formMensaje" style="display:none;color:green">Enviado correctamente.</p>
+    <div class="form-success" id="formMensaje">✅ Tu solicitud fue enviada correctamente.</div>
   </section>
 
   <section id="contacto" class="tab-content">
@@ -124,6 +144,7 @@
   </section>
 
   <footer>
+    <img src="logo.png" alt="logo de fondo" style="width:60px; opacity:0.3;"><br>
     <p>© 2025 Agro Connections S.A. de C.V.</p>
   </footer>
 
@@ -132,7 +153,13 @@
       document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
+
+    document.getElementById("formularioContacto").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const mensaje = document.getElementById("formMensaje");
+      mensaje.style.display = "block";
+      this.reset();
+    });
   </script>
 </body>
 </html>
-
