@@ -90,3 +90,52 @@ footer {
   border: none;
   cursor: pointer;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.toast {
+  display: none;
+  background-color: #28a745;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.sectores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+.sectores-grid div {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.sectores-grid img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+details {
+  margin-bottom: 1rem;
+  background-color: #eef4fa;
+  padding: 1rem;
+  border-left: 5px solid #005a9e;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sectores-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
