@@ -180,3 +180,54 @@ details {
   font-size: 0.95rem;
   color: #333;
 }
+
+
+
+/* Mejoras para header */
+header img.logo {
+  max-width: 220px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Botones del menú */
+nav button {
+  background: linear-gradient(to right, #006699, #004466);
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  transition: background 0.3s ease;
+}
+nav button:hover {
+  background: #007acc;
+}
+
+/* Encabezados centrados */
+.tab-content h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* WhatsApp flotante */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 28px;
+  background: #25d366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  text-decoration: none;
+}
+
