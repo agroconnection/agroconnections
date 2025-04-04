@@ -83,6 +83,34 @@
       <button type="submit"><i class="fa fa-paper-plane"></i> Enviar solicitud</button>
     </form>
     <p id="formMensaje" style="display:none; color: green;">✅ Enviado correctamente. Gracias por registrarte.</p>
+    <script>
+      const formulario = document.getElementById("formularioContacto");
+      const mensaje = document.getElementById("formMensaje");
+
+      formulario.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const datos = {
+          nombre: formulario.nombre.value,
+          edad: formulario.edad.value,
+          perfil: formulario.perfil.value,
+          telefono: formulario.telefono.value,
+          correo: formulario.correo.value,
+        };
+
+        try {
+          await fetch("https://script.google.com/a/macros/agroconnections.mx/s/AKfycbwxcC_8EoIZ73vL5qSisZGZOpsdctxlAFbEjTOUqwKQkoSjTxqVTf3M50iJqkVqqoOn/exec", {
+            method: "POST",
+            body: JSON.stringify(datos),
+          });
+
+          formulario.reset();
+          mensaje.style.display = "block";
+        } catch (error) {
+          alert("❌ Hubo un error al enviar el formulario.");
+        }
+      });
+    </script>
   </section>
 
   <section id="contacto">
@@ -105,3 +133,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
