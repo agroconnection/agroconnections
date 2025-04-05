@@ -151,16 +151,14 @@
 </div>
 </div>
 </section>
-
 <section class="tab-content" id="galeria">
-  <h2>📸 Galería</h2>
-  <div class="galeria">
-    <img src="images/sector-agricola.jpg" alt="Agrícola">
-    <img src="images/sector-construccion.jpg" alt="Construcción">
-    <img src="images/sector-servicios.jpg" alt="Servicios">
-  </div>
+<h2>📸 Galería</h2>
+<div class="galeria">
+<img alt="Agrícola" src="images/sector-agricola.jpg"/>
+<img alt="Construcción" src="images/sector-construccion.jpg"/>
+<img alt="Servicios" src="images/sector-servicios.jpg"/>
+</div>
 </section>
-
 <section class="tab-content" id="videos">
 <h2>🎥 Videos</h2>
 <iframe height="220" src="https://www.youtube.com/embed/VIDEO_ID1" width="400"></iframe>
@@ -180,27 +178,63 @@
 <li>✔ No presentar enfermedades crónicas.</li>
 </ul>
 </li>
-</ul>
+<li>✅ Copia de credencial de elector (INE).</li><li>✅ Comprobante de domicilio (no mayor a 3 meses).</li></ul>
 </section>
 <section class="tab-content" id="proceso">
 <h2>🔄 Etapas del Proceso de Reclutamiento</h2>
-<div class="proceso-container">
-<div class="proceso-etapa">
-<div class="icono">📝</div>
+<div class="etapas-flujo">
+<div class="etapa-box">
+<div class="etapa-numero">1</div>
 <h3>Junio a Noviembre</h3>
 <p>Enlistado y selección de candidatos.</p>
 </div>
-<div class="proceso-etapa">
-<div class="icono">📄</div>
+<div class="flecha">➡️</div>
+<div class="etapa-box">
+<div class="etapa-numero">2</div>
 <h3>Diciembre a Enero</h3>
 <p>Entrega de documentación.</p>
 </div>
-<div class="proceso-etapa">
-<div class="icono">🛂</div>
+<div class="flecha">➡️</div>
+<div class="etapa-box">
+<div class="etapa-numero">3</div>
 <h3>Febrero a Abril</h3>
 <p>Visado y contratación.</p>
 </div>
 </div>
+<style>
+    .etapas-flujo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .etapa-box {
+        background-color: #ffffff;
+        border: 2px solid #007acc;
+        border-radius: 12px;
+        padding: 1rem;
+        width: 260px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .etapa-numero {
+        font-size: 2rem;
+        font-weight: bold;
+        background: #007acc;
+        color: white;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 0 auto 0.5rem auto;
+    }
+    .flecha {
+        font-size: 2rem;
+        color: #007acc;
+    }
+    </style>
 </section>
 <section class="tab-content" id="faq">
 <h2>❓ Preguntas Frecuentes</h2>
@@ -242,10 +276,10 @@
 <p>📧 info@agroconnections.mx</p>
 <p>📞 483 119 0497 / 483 688 0020</p>
 </section>
-<footer><img alt="Logo Agro Connections" src="images/logo.png" style="max-width: 120px; display: block; margin: auto; margin-bottom: 10px;"/>
-<img alt="logo de fondo" src="logo.png" style="max-width: 180px; display: block; margin: auto;"/><br/>
+<footer><img alt="Logo Agro Connections" src="images/logo.png" style="max-width: 120px; display: block; margin: auto; margin-bottom: 10px;">
+<img alt="logo de fondo" src="logo.png" style="max-width: 180px; display: block; margin: auto;"><br/>
 <p>© 2025 Agro Connections S.A. de C.V.</p>
-</footer>
+</img></img></footer>
 <script>
     function mostrarSeccion(id) {
       document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
@@ -259,10 +293,8 @@
       this.reset();
     });
   </script>
-
 <a class="whatsapp" href="https://wa.me/524831190497" target="_blank">
-  <i class="fab fa-whatsapp"></i>
+<i class="fab fa-whatsapp"></i>
 </a>
-
 </body>
 </html>
