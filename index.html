@@ -136,6 +136,11 @@
   <meta content="https://agroconnections.mx" property="og:url"/>
  </head>
  <body>
+
+<div style="text-align:center; padding: 20px;">
+  <img src="images/logo.png" alt="Agro Connections" style="max-height: 80px;">
+</div>
+
   <header>
    <img alt="Agro Connections logo" class="logo" src="logo.png"/>
    <h1>
@@ -296,28 +301,23 @@
    </p>
   </section>
   <section class="tab-content" id="registro">
-   <h2>
-    📝 Registro
-   </h2>
-   <form id="formularioContacto">
-    <input name="nombre" placeholder="Nombre completo" required=""/>
-    <br/>
-    <input min="18" name="edad" placeholder="Edad" required="" title="Debes tener al menos 18 a&ntilde;os para registrarte" type="number"/>
-    <br/>
-    <textarea name="perfil" placeholder="Perfil o experiencia" required=""></textarea>
-    <br/>
-    <input name="telefono" pattern="\d{10}" placeholder="Tel&eacute;fono" required="" title="Ingresa un n&uacute;mero de 10 d&iacute;gitos sin espacios"/>
-    <br/>
-    <input name="correo" placeholder="Correo electr&oacute;nico" required="" type="email"/>
-    <br/>
-    <button type="submit">
-     Enviar
+
+<section id="registro" class="fade-in" style="padding: 40px; text-align: center;">
+  <h2 style="margin-bottom: 20px;">📝 Registro</h2>
+  <form id="formularioContacto" style="max-width: 700px; margin: auto; display: grid; gap: 15px; grid-template-columns: 1fr 1fr;">
+    <input type="text" name="nombre" placeholder="Nombre completo *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <input type="number" name="edad" placeholder="Edad *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <input type="text" name="telefono" placeholder="Teléfono *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <input type="email" name="correo" placeholder="Correo electrónico *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <textarea name="perfil" placeholder="Perfil o experiencia *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; grid-column: span 2;"></textarea>
+    <input type="text" name="area" placeholder="Área de interés o especialización *" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; grid-column: span 2;">
+    <button type="submit" style="grid-column: span 2; padding: 12px 20px; border-radius: 8px; background-color: #3498db; color: white; border: none; cursor: pointer;">
+      Enviar
     </button>
-   </form>
-   <div class="form-success" id="formMensaje">
-    ✅ Tu solicitud fue enviada correctamente.
-   </div>
-  </section>
+  </form>
+</section>
+
+</section>
   <section class="tab-content" id="requisitos">
    <h2>
     📋 Requisitos Generales
@@ -493,5 +493,20 @@ document.getElementById("formularioContacto").addEventListener("submit", functio
    <i class="fab fa-whatsapp">
    </i>
   </a>
- </body>
+ 
+
+
+
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+style="position:fixed;bottom:20px;right:20px;padding:10px 15px;border:none;
+background:#3498db;color:#fff;border-radius:50%;z-index:999;">↑</button>
+
+<button id="toggleTheme" style="position:fixed;top:10px;right:10px;z-index:999;padding:10px;">🌓</button>
+<script>
+document.getElementById("toggleTheme").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+</script>
+
+</body>
 </html>
