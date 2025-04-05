@@ -111,76 +111,29 @@
     }
   </style>
 </head>
-<body>
-<header>
+<body><header>
 <img alt="Agro Connections logo" class="logo" src="logo.png"/>
 <h1>Agro Connections S.A. de C.V.</h1>
 <p>“Más que un reclutamiento, una conexión confiable”</p>
-<nav>
-<button onclick="mostrarSeccion('mision')">Misión y Visión</button>
-<button onclick="mostrarSeccion('sectores')">Sectores</button>
-<button onclick="mostrarSeccion('galeria')">Galería</button>
-<button onclick="mostrarSeccion('videos')">Videos</button>
-<button onclick="mostrarSeccion('requisitos')">Requisitos</button>
-<button onclick="mostrarSeccion('faq')">Preguntas Frecuentes</button>
-<button onclick="mostrarSeccion('registro')">Registro</button>
-<button onclick="mostrarSeccion('contacto')">Contacto</button>
-<button onclick="mostrarSeccion('proceso')">Etapas del Proceso</button></nav>
-</header>
-<section class="tab-content active" id="mision">
-<h2>🌟 Misión y Visión</h2>
-<h3>MISIÓN</h3>
-<p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
-<h3>VISIÓN</h3>
-<p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
-</section>
-<section class="tab-content" id="sectores">
-<h2>🌾 Sectores que Atendemos</h2>
-<div class="sectores-grid">
-<div>
-<img alt="Sector Agrícola" src="images/sector-agricola.jpg"/>
-<p><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</p>
-</div>
-<div>
-<img alt="Sector Construcción" src="images/sector-construccion.jpg"/>
-<p><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</p>
-</div>
-<div>
-<img alt="Sector Servicios" src="images/sector-servicios.jpg"/>
-<p><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</p>
-</div>
-</div>
-</section>
-<section class="tab-content" id="galeria">
-<h2>📸 Galería</h2>
-<div class="galeria">
-<img alt="Agrícola" src="images/sector-agricola.jpg"/>
-<img alt="Construcción" src="images/sector-construccion.jpg"/>
-<img alt="Servicios" src="images/sector-servicios.jpg"/>
-</div>
-</section>
-<section class="tab-content" id="videos">
-<h2>🎥 Videos</h2>
-<iframe height="220" src="https://www.youtube.com/embed/VIDEO_ID1" width="400"></iframe>
-</section>
-<section class="tab-content" id="requisitos">
-<h2>📋 Requisitos Generales</h2>
-<ul>
-<li>✅ Ser mayor de 18 años.</li>
-<li>✅ Contar con experiencia previa en el rubro de interés.</li>
-<li>✅ Contar con pasaporte vigente.</li>
-<li>✅ <strong>Certificado Médico Anexado</strong></li>
-<li>✅ <strong>Prueba de Embarazo</strong> (en caso de mujeres)</li>
-<li>✅ <strong>Declaración de Salud:</strong>
-<ul>
-<li>✔ Capacidad para trabajar de pie durante 8 horas.</li>
-<li>✔ Capacidad para levantar hasta 30 libras.</li>
-<li>✔ No presentar enfermedades crónicas.</li>
-</ul>
-</li>
-<li>✅ Copia de credencial de elector (INE).</li><li>✅ Comprobante de domicilio (no mayor a 3 meses).</li></ul>
-</section>
-<section class="tab-content" id="proceso">
+<nav><button onclick="mostrarSeccion('#proceso')">Etapas del Proceso</button><button onclick="mostrarSeccion('#requisitos')">Requisitos</button><button onclick="mostrarSeccion('#registro')">Registro</button><button onclick="mostrarSeccion('#mision')">Misión y Visión</button><button onclick="mostrarSeccion('#sectores')">Sectores</button><button onclick="mostrarSeccion('#faq')">Preguntas Frecuentes</button><button onclick="mostrarSeccion('#contacto')">Contacto</button><button onclick="mostrarSeccion('#galeria')">Galería</button><button onclick="mostrarSeccion('#videos')">Videos</button></nav>
+</header><footer><img alt="Logo Agro Connections" src="images/logo.png" style="max-width: 120px; display: block; margin: auto; margin-bottom: 10px;"/>
+<img alt="logo de fondo" src="logo.png" style="max-width: 180px; display: block; margin: auto;"/><br/>
+<p>© 2025 Agro Connections S.A. de C.V.</p>
+</footer><script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    document.getElementById("formularioContacto").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const mensaje = document.getElementById("formMensaje");
+      mensaje.style.display = "block";
+      this.reset();
+    });
+  </script><a class="whatsapp" href="https://wa.me/524831190497" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a><section class="tab-content" id="proceso">
 <h2>🔄 Etapas del Proceso de Reclutamiento</h2>
 <div class="etapas-flujo">
 <div class="etapa-box">
@@ -235,8 +188,56 @@
         color: #007acc;
     }
     </style>
-</section>
-<section class="tab-content" id="faq">
+</section><section class="tab-content" id="requisitos">
+<h2>📋 Requisitos Generales</h2>
+<ul>
+<li>✅ Ser mayor de 18 años.</li>
+<li>✅ Contar con experiencia previa en el rubro de interés.</li>
+<li>✅ Contar con pasaporte vigente.</li>
+<li>✅ <strong>Certificado Médico Anexado</strong></li>
+<li>✅ <strong>Prueba de Embarazo</strong> (en caso de mujeres)</li>
+<li>✅ <strong>Declaración de Salud:</strong>
+<ul>
+<li>✔ Capacidad para trabajar de pie durante 8 horas.</li>
+<li>✔ Capacidad para levantar hasta 30 libras.</li>
+<li>✔ No presentar enfermedades crónicas.</li>
+</ul>
+</li>
+<li>✅ Copia de credencial de elector (INE).</li><li>✅ Comprobante de domicilio (no mayor a 3 meses).</li></ul>
+</section><section class="tab-content" id="registro">
+<h2>📝 Registro</h2>
+<form id="formularioContacto">
+<input name="nombre" placeholder="Nombre completo" required=""/><br/>
+<input name="edad" placeholder="Edad" required="" type="number"/><br/>
+<textarea name="perfil" placeholder="Perfil o experiencia" required=""></textarea><br/>
+<input name="telefono" placeholder="Teléfono" required=""/><br/>
+<input name="correo" placeholder="Correo electrónico" required="" type="email"/><br/>
+<button type="submit">Enviar</button>
+</form>
+<div class="form-success" id="formMensaje">✅ Tu solicitud fue enviada correctamente.</div>
+</section><section class="tab-content active" id="mision">
+<h2>🌟 Misión y Visión</h2>
+<h3>MISIÓN</h3>
+<p>Conectar el talento mexicano con oportunidades laborales en Estados Unidos, dentro de los sectores agrícola, construcción y servicios, mediante procesos transparentes, seguros y responsables que promuevan el desarrollo humano y el bienestar social.</p>
+<h3>VISIÓN</h3>
+<p>Ser la empresa líder en vinculación laboral internacional, reconocida por su integridad, innovación y compromiso con el empleo digno, generando relaciones sostenibles entre trabajadores y empleadores en diversos sectores.</p>
+</section><section class="tab-content" id="sectores">
+<h2>🌾 Sectores que Atendemos</h2>
+<div class="sectores-grid">
+<div>
+<img alt="Sector Agrícola" src="images/sector-agricola.jpg"/>
+<p><strong>Agrícola:</strong> Siembra, cosecha y empaque de productos del campo.</p>
+</div>
+<div>
+<img alt="Sector Construcción" src="images/sector-construccion.jpg"/>
+<p><strong>Construcción:</strong> Albañilería, pintura, electricidad y estructuras.</p>
+</div>
+<div>
+<img alt="Sector Servicios" src="images/sector-servicios.jpg"/>
+<p><strong>Servicios Generales:</strong> Limpieza, mantenimiento y jardinería.</p>
+</div>
+</div>
+</section><section class="tab-content" id="faq">
 <h2>❓ Preguntas Frecuentes</h2>
 <div class="faq-item">
 <h3>¿Necesito tener experiencia?</h3>
@@ -258,43 +259,20 @@
 <h3>¿Qué documentos debo tener listos?</h3>
 <p>Pasaporte vigente, certificado médico, prueba de embarazo (en caso de mujeres), y declaración de salud.</p>
 </div>
-</section>
-<section class="tab-content" id="registro">
-<h2>📝 Registro</h2>
-<form id="formularioContacto">
-<input name="nombre" placeholder="Nombre completo" required=""/><br/>
-<input name="edad" placeholder="Edad" required="" type="number"/><br/>
-<textarea name="perfil" placeholder="Perfil o experiencia" required=""></textarea><br/>
-<input name="telefono" placeholder="Teléfono" required=""/><br/>
-<input name="correo" placeholder="Correo electrónico" required="" type="email"/><br/>
-<button type="submit">Enviar</button>
-</form>
-<div class="form-success" id="formMensaje">✅ Tu solicitud fue enviada correctamente.</div>
-</section>
-<section class="tab-content" id="contacto">
+</section><section class="tab-content" id="contacto">
 <h2>📞 Contacto</h2>
 <p>📧 info@agroconnections.mx</p>
 <p>📞 483 119 0497 / 483 688 0020</p>
-</section>
-<footer><img alt="Logo Agro Connections" src="images/logo.png" style="max-width: 120px; display: block; margin: auto; margin-bottom: 10px;">
-<img alt="logo de fondo" src="logo.png" style="max-width: 180px; display: block; margin: auto;"><br/>
-<p>© 2025 Agro Connections S.A. de C.V.</p>
-</img></img></footer>
-<script>
-    function mostrarSeccion(id) {
-      document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-
-    document.getElementById("formularioContacto").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const mensaje = document.getElementById("formMensaje");
-      mensaje.style.display = "block";
-      this.reset();
-    });
-  </script>
-<a class="whatsapp" href="https://wa.me/524831190497" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-</body>
+</section><section class="tab-content" id="galeria">
+<h2>📸 Galería</h2>
+<div class="galeria">
+<img alt="Agrícola" src="images/sector-agricola.jpg"/>
+<img alt="Construcción" src="images/sector-construccion.jpg"/>
+<img alt="Servicios" src="images/sector-servicios.jpg"/>
+</div>
+</section><section class="tab-content" id="videos">
+<h2>🎥 Videos</h2>
+<iframe height="220" src="https://www.youtube.com/embed/VIDEO_ID1" width="400"></iframe>
+</section></body>
 </html>
+
