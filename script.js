@@ -1,4 +1,3 @@
-
 document.getElementById("formularioContacto").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -43,3 +42,20 @@ if (btn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// Mostrar/Ocultar secciones
+function mostrarSeccion(id) {
+  const secciones = document.querySelectorAll("section.tab-content");
+  secciones.forEach(sec => sec.style.display = "none");
+
+  const activa = document.querySelector(id);
+  if (activa) {
+    activa.style.display = "block";
+    activa.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// Mostrar primera sección por defecto
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarSeccion("#proceso");
+});
