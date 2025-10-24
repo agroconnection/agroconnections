@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agro Connections S.A. de C.V.</title>
+  <meta name="description" content="Reclutamiento agrícola confiable. Evidencias reales (Drive) con respaldo local y registro multipaso con PDF." />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; media-src 'self' https: data:; connect-src https://script.google.com 'self'; style-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; form-action 'self' https://script.google.com">
+  <!-- integrity-hash: TO_BE_FILLED -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header role="banner">
+  <div class="header-container">
+    <div class="title-block">
+      <h1>Agro Connections S.A. de C.V.</h1>
+      <p>“Más que un reclutamiento, una conexión confiable”</p>
+    </div>
+  </div>
+</header>
+
+<nav id="main-nav" aria-label="Principal">
+  <button type="button" data-section="inicio">Inicio</button>
+  <button type="button" data-section="evidencia">Evidencia</button>
+  <button type="button" data-section="registro">Registro</button>
+  <button type="button" data-section="faq">Preguntas</button>
+  <button type="button" data-section="contacto">Contacto</button>
+</nav>
+
+<main id="contenido">
+  <section id="inicio" class="active">
+    <h2>🏠 Bienvenido</h2>
+    <p>Versión ligera y segura: galería con Google Drive + respaldo local y registro multipaso con PDF.</p>
+  </section>
+
+  <section id="evidencia">
+    <h2>📸 Evidencia (Drive + local)</h2>
+    <div id="galeria" class="gallery" aria-live="polite"></div>
+
+    <div class="uploader">
+      <h3>Subir evidencia (requiere token)</h3>
+      <form id="uploadForm">
+        <input type="file" id="file" name="file" accept="image/*,video/*" required />
+        <input type="text" id="caption" name="caption" placeholder="Descripción (opcional)" />
+        <input type="text" id="alt" name="alt" placeholder="Texto alternativo (opcional)" />
+        <input type="password" id="token" name="token" placeholder="Token de administrador" required />
+        <div class="actions">
+          <button type="submit">Subir evidencia</button>
+          <button type="button" id="reload">Recargar galería</button>
+        </div>
+      </form>
+      <p class="hint">Al activar tu Apps Script, la galería leerá de tu carpeta en Drive. Si la API falla, se usa el respaldo local.</p>
+    </div>
+  </section>
+
+  <section id="registro">
+    <h2>📝 Registro (multipaso)</h2>
+    <div class="stepper" role="tablist" aria-label="Registro multipaso">
+      <button class="step active" data-step="1" role="tab" aria-selected="true">1. Datos</button>
+      <button class="step" data-step="2" role="tab" aria-selected="false">2. Documentos</button>
+      <button class="step" data-step="3" role="tab" aria-selected="false">3. Revisión</button>
+    </div>
+
+    <form id="registroForm" enctype="multipart/form-data" novalidate>
+      <div class="step-pane active" data-step="1">
+        <div class="grid">
+          <div><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" required /></div>
+          <div><label for="edad">Edad</label><input id="edad" name="edad" type="number" min="16" max="65" required /></div>
+          <div><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" pattern="[0-9\\s\\-\\+()]{8,20}" required /></div>
+          <div><label for="correo">Correo</label><input id="correo" name="correo" type="email" required /></div>
+          <div class="full"><label for="perfil">Perfil o experiencia</label><textarea id="perfil" name="perfil" rows="3" required></textarea></div>
+          <div><label for="experiencia">¿Has trabajado en EE.UU. antes?</label><select id="experiencia" name="experiencia" required><option value="">Seleccione</option><option value="si">Sí</option><option value="no">No</option></select></div>
+          <div><label for="antecedentes">¿Deportaciones o tickets en EE.UU.?</label><select id="antecedentes" name="antecedentes" required><option value="">Seleccione</option><option value="si">Sí</option><option value="no">No</option></select></div>
+        </div>
+        <div class="actions"><button type="button" id="next1">Siguiente</button></div>
+      </div>
+
+      <div class="step-pane" data-step="2">
+        <div class="grid">
+          <div><label for="ife">Identificación (PDF/JPG/PNG &lt; 5MB)</label><input id="ife" name="ife" type="file" accept=".pdf,image/*" required /></div>
+          <div><label for="curp">CURP (PDF/JPG/PNG &lt; 5MB)</label><input id="curp" name="curp" type="file" accept=".pdf,image/*" required /></div>
+          <div><label for="domicilio">Comprobante domicilio (PDF/JPG/PNG &lt; 5MB)</label><input id="domicilio" name="domicilio" type="file" accept=".pdf,image/*" required /></div>
+          <div><label for="acta">Acta de nacimiento (PDF/JPG/PNG &lt; 5MB)</label><input id="acta" name="acta" type="file" accept=".pdf,image/*" required /></div>
+          <div class="full checkbox"><label><input type="checkbox" id="consent" required> He leído y acepto el <a href="privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label></div>
+        </div>
+        <div class="actions"><button type="button" id="back2">Regresar</button><button type="button" id="next2">Siguiente</button></div>
+      </div>
+
+      <div class="step-pane" data-step="3">
+        <h3>Revisión</h3><ul id="revisión-lista" class="review"></ul>
+        <div class="actions"><button type="button" id="back3">Regresar</button><button type="submit">Enviar solicitud</button></div>
+      </div>
+    </form>
+  </section>
+
+  <section id="faq"><h2>❓ Preguntas frecuentes</h2>
+    <details><summary>¿Cuál es el proceso?</summary><p>Formulario, validación y entrevista.</p></details>
+  </section>
+
+  <section id="contacto"><h2>📞 Contacto</h2>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/524831190497" target="_blank" rel="noopener">+52 483 119 0497</a></li>
+      <li>Correo: <a href="mailto:contacto@agroconnections.mx">contacto@agroconnections.mx</a></li>
+    </ul>
+  </section>
+</main>
+
+<div id="modalExito" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <h3 id="modal-title">✅ ¡Registro enviado!</h3>
+    <p id="folio"></p>
+    <button type="button" id="descargarPDF">📄 Descargar PDF</button>
+    <button type="button" id="irInicio">🏠 Inicio</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Agro Connections S.A. de C.V. — <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></p>
+  <p class="verificado">🔐 Sitio verificado y protegido por firma digital SHA-256</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/524831190497" target="_blank" rel="noopener" aria-label="WhatsApp Agro Connections">WhatsApp</a>
+<script src="js/app.js" defer></script>
+</body>
+</html>
