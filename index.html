@@ -5,32 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agro Connections S.A. de C.V.</title>
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Icono / Favicon (opcional, si quieres usar el logo) -->
   <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
   <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
-  <!-- BARRA SUPERIOR -->
+  <!-- ENCABEZADO -->
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <img src="assets/logo.png" alt="Agro Connections" class="logo" />
-        <div>
+        <div class="brand-text">
           <h1>Agro Connections S.A. de C.V.</h1>
-          <p>Más que un reclutamiento, una conexión confiable</p>
+          <p>Más que un reclutamiento, una conexión confiable.</p>
         </div>
       </div>
 
       <!-- MENÚ -->
       <nav class="main-nav">
-        <!-- OJO: data-section debe coincidir con los IDs de las secciones -->
         <button class="nav-link active" data-section="inicio">Inicio</button>
         <button class="nav-link" data-section="evidencia">Evidencia</button>
-        <button class="nav-link" data-section="registro">Registro</button>
         <button class="nav-link" data-section="preguntas">Preguntas</button>
         <button class="nav-link" data-section="contacto">Contacto</button>
       </nav>
@@ -41,26 +36,31 @@
   <main class="site-main">
     <!-- INICIO -->
     <section id="inicio" class="page-section is-visible">
-      <div class="card">
-        <h2>Bienvenido</h2>
-        <p>
-          Agro Connections es el enlace entre trabajadores y contratistas
-          agrícolas en Estados Unidos, con enfoque en actividades como la
-          <strong>cosecha de blueberries</strong>.
-        </p>
-        <ul>
-          <li>Proceso claro y transparente.</li>
-          <li>Comunicación directa y acompañamiento.</li>
-          <li>Énfasis en seguridad y cumplimiento.</li>
-        </ul>
-
-        <div class="actions-row">
-          <button class="btn primary" data-section="registro">
-            Quiero registrarme
-          </button>
-          <button class="btn secondary" data-section="evidencia">
-            Ver evidencias
-          </button>
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Conexión directa entre trabajadores y contratistas agrícolas en EE.UU.</h2>
+          <p>
+            Acompañamos a las personas interesadas en trabajar en <strong>cosecha de blueberries</strong>
+            y otras actividades agrícolas, brindando información clara, seguimiento y
+            comunicación directa con el contratista.
+          </p>
+          <ul class="hero-list">
+            <li>Información transparente sobre el proceso y requisitos.</li>
+            <li>Enfoque en seguridad, cumplimiento y trato digno.</li>
+            <li>Acompañamiento antes y durante el proceso migratorio.</li>
+          </ul>
+          <div class="hero-actions">
+            <button class="btn primary" data-section="contacto">
+              Quiero más información
+            </button>
+            <button class="btn secondary" data-section="evidencia">
+              Ver fotos y videos
+            </button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <!-- Puedes cambiar esta imagen por una foto real -->
+          <img src="assets/campo-blueberries.jpg" alt="Campo de blueberries" />
         </div>
       </div>
     </section>
@@ -68,154 +68,46 @@
     <!-- EVIDENCIA -->
     <section id="evidencia" class="page-section">
       <div class="card">
-        <h2>Evidencia (Drive + respaldo local)</h2>
+        <h2>Evidencia de trabajo y testimonios</h2>
         <p>
-          Aquí podrás mostrar fotografías, videos y documentos que respalden la
-          seriedad del proceso: viajes anteriores, campos de trabajo, contrato
-          firmado, etc.
+          Este espacio está pensado para mostrar <strong>fotos, videos y documentos</strong>
+          que generen confianza: campos de trabajo, transporte, hospedaje y experiencias
+          de personas que han participado en el programa.
         </p>
 
-        <p class="note">
-          * En esta versión ligera los archivos se gestionan por Google Drive.
-          Puedes compartir un enlace de carpeta o incrustar un iframe más
-          adelante.
-        </p>
-
-        <div class="drive-box">
-          <label for="link-drive">Enlace de tu carpeta de Drive:</label>
-          <input
-            id="link-drive"
-            type="url"
-            placeholder="https://drive.google.com/…"
-          />
-          <button class="btn secondary">Abrir carpeta</button>
+        <!-- GALERÍA DE FOTOS -->
+        <h3>Galería de fotos</h3>
+        <div class="gallery">
+          <!-- Cambia las rutas por tus fotos reales -->
+          <figure class="gallery-item">
+            <img src="assets/foto1.jpg" alt="Trabajo en campo" />
+            <figcaption>Cosecha de blueberries en campo.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/foto2.jpg" alt="Transporte" />
+            <figcaption>Transporte organizado para el grupo.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/foto3.jpg" alt="Hospedaje" />
+            <figcaption>Ejemplo de hospedaje proporcionado.</figcaption>
+          </figure>
         </div>
-      </div>
-    </section>
 
-    <!-- REGISTRO -->
-    <section id="registro" class="page-section">
-      <div class="card">
-        <h2>Registro multipaso</h2>
-
+        <!-- VIDEOS / DRIVE -->
+        <h3>Videos y material adicional</h3>
         <p>
-          Llena tu información básica para que podamos contactarte y verificar
-          tu perfil para las vacantes disponibles.
+          Aquí puedes incrustar un video de YouTube, o un video almacenado en tu
+          Google Drive (compartido públicamente).
         </p>
-
-        <form class="wizard-form">
-          <div class="form-step is-visible" data-step="1">
-            <h3>1. Datos personales</h3>
-
-            <label>
-              Nombre completo
-              <input type="text" name="nombre" required />
-            </label>
-
-            <div class="row">
-              <label>
-                Edad
-                <input type="number" name="edad" min="18" />
-              </label>
-
-              <label>
-                Teléfono
-                <input type="tel" name="telefono" />
-              </label>
-            </div>
-
-            <label>
-              Correo electrónico
-              <input type="email" name="correo" />
-            </label>
-
-            <label>
-              Perfil o experiencia
-              <select name="perfil">
-                <option value="">Selecciona una opción</option>
-                <option value="sin-exp">Sin experiencia previa</option>
-                <option value="blueberries">Cosecha de blueberries</option>
-                <option value="otros-frutales">Otros cultivos frutales</option>
-                <option value="mixto">Mixto agrícola / otros trabajos</option>
-              </select>
-            </label>
-
-            <div class="row">
-              <label>
-                ¿Has trabajado en EE.UU. antes?
-                <select name="usa_experience">
-                  <option value="">Selecciona</option>
-                  <option value="si">Sí</option>
-                  <option value="no">No</option>
-                </select>
-              </label>
-
-              <label>
-                ¿Deportaciones o tickets en EE.UU.?
-                <select name="usa_tickets">
-                  <option value="">Selecciona</option>
-                  <option value="no">No</option>
-                  <option value="si">Sí</option>
-                </select>
-              </label>
-            </div>
-
-            <div class="actions-row end">
-              <button class="btn primary" type="button" data-next-step="2">
-                Siguiente
-              </button>
-            </div>
-          </div>
-
-          <div class="form-step" data-step="2">
-            <h3>2. Documentos</h3>
-
-            <p>
-              Por ahora solo se solicitarán los documentos durante la entrevista
-              y por mensajería. Esta sección se puede conectar después con
-              Google Drive para subir archivos.
-            </p>
-
-            <ul>
-              <li>Pasaporte vigente.</li>
-              <li>INE.</li>
-              <li>Fotografías para visa.</li>
-            </ul>
-
-            <div class="actions-row space-between">
-              <button class="btn secondary" type="button" data-prev-step="1">
-                Regresar
-              </button>
-              <button class="btn primary" type="button" data-next-step="3">
-                Siguiente
-              </button>
-            </div>
-          </div>
-
-          <div class="form-step" data-step="3">
-            <h3>3. Revisión y envío</h3>
-
-            <p>
-              Revisa que tus datos sean correctos. Una vez enviado, el equipo de
-              Agro Connections se pondrá en contacto contigo para agendar
-              entrevista.
-            </p>
-
-            <label>
-              Comentarios adicionales
-              <textarea name="comentarios" rows="4"></textarea>
-            </label>
-
-            <div class="actions-row space-between">
-              <button class="btn secondary" type="button" data-prev-step="2">
-                Regresar
-              </button>
-              <button class="btn primary" type="submit">
-                Enviar registro
-              </button>
-            </div>
-          </div>
-        </form>
+        <!-- Ejemplo de video incrustado (cambia la URL por tu video real) -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Video de ejemplo"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </section>
 
@@ -227,26 +119,36 @@
         <details>
           <summary>¿En qué consiste el trabajo en la cosecha de blueberries?</summary>
           <p>
-            Principalmente recolección en campo, selección de fruta y apoyo en
-            actividades relacionadas. Las condiciones específicas se explican en
-            la entrevista y en el contrato.
+            Principalmente en la recolección cuidadosa de fruta en campo, selección de
+            calidad y apoyo en actividades relacionadas. Los horarios, pagos y condiciones
+            específicas se explican directamente durante la entrevista informativa.
           </p>
         </details>
 
         <details>
-          <summary>¿Quién cubre el transporte y hospedaje?</summary>
+          <summary>¿Hay inversión personal?</summary>
           <p>
-            El proceso puede incluir inversión personal inicial para trámites y
-            gastos de viaje. Los detalles se explican claramente antes de
-            firmar cualquier documento.
+            Sí puede existir inversión personal en temas como transporte y hospedaje
+            inicial. Esta información se explica por escrito y de forma clara antes de
+            que tomes cualquier decisión.
+          </p>
+        </details>
+
+        <details>
+          <summary>¿Quién es el contratista?</summary>
+          <p>
+            Agro Connections funciona como <strong>enlace</strong> entre las personas
+            interesadas y el contratista agrícola en Estados Unidos, apoyando en
+            organización, comunicación y seguimiento.
           </p>
         </details>
 
         <details>
           <summary>¿Qué requisitos migratorios necesito?</summary>
           <p>
-            Se revisan pasaporte vigente, visa correspondiente y la
-            documentación que exija la legislación de Estados Unidos y México.
+            Es indispensable contar con <strong>pasaporte vigente</strong> y cumplir las
+            disposiciones migratorias tanto de México como de Estados Unidos. Se revisan
+            los detalles de tu caso durante la entrevista informativa.
           </p>
         </details>
       </div>
@@ -255,21 +157,72 @@
     <!-- CONTACTO -->
     <section id="contacto" class="page-section">
       <div class="card">
-        <h2>Contacto</h2>
+        <h2>Solicitar información</h2>
         <p>
-          Para dudas o seguimiento, puedes escribirnos por WhatsApp o correo
-          electrónico.
+          Completa el siguiente formulario o contáctanos directamente por WhatsApp
+          para recibir información detallada sobre el proceso.
         </p>
 
-        <ul>
-          <li>📞 Teléfono / WhatsApp México: <strong>483 119 0497</strong></li>
-          <li>✉️ Correo: <strong>contacto@agroconnections.mx</strong> (ejemplo)</li>
-        </ul>
+        <div class="contact-layout">
+          <!-- FORMULARIO (solo para enviar por correo) -->
+          <form
+            class="contact-form"
+            action="mailto:contacto@agroconnections.mx"
+            method="post"
+            enctype="text/plain"
+          >
+            <label>
+              Nombre completo
+              <input type="text" name="nombre" required />
+            </label>
+
+            <label>
+              WhatsApp / Teléfono
+              <input type="tel" name="telefono" required />
+            </label>
+
+            <label>
+              Correo electrónico
+              <input type="email" name="correo" />
+            </label>
+
+            <label>
+              Mensaje o dudas
+              <textarea name="mensaje" rows="4" required></textarea>
+            </label>
+
+            <button type="submit" class="btn primary">
+              Enviar solicitud
+            </button>
+
+            <p class="form-note">
+              *Este formulario abre tu cliente de correo para enviar la información.
+              Si lo prefieres, puedes escribirnos directamente por WhatsApp.
+            </p>
+          </form>
+
+          <!-- DATOS DE CONTACTO -->
+          <div class="contact-info">
+            <h3>Contacto directo</h3>
+            <ul>
+              <li>📞 WhatsApp México: <strong>483 119 0497</strong></li>
+              <li>📧 Correo: <strong>contacto@agroconnections.mx</strong> (ejemplo)</li>
+            </ul>
+            <a
+              class="btn secondary full-width"
+              href="https://wa.me/524831190497"
+              target="_blank"
+              rel="noopener"
+            >
+              Enviar mensaje por WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- PIE -->
   <footer class="site-footer">
     <p>
       © Agro Connections S.A. de C.V. ·
@@ -278,8 +231,6 @@
     </p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="js/app.js"></script>
 </body>
 </html>
-
