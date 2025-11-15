@@ -1,171 +1,285 @@
-<!doctype html>
-<html lang="es-MX">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agro Connections S.A. de C.V.</title>
-  <meta name="description" content="Reclutamiento agrícola confiable para trabajos en Estados Unidos, con enfoque en cosecha de blueberries.">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/logo.png" type="image/png">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Icono / Favicon (opcional, si quieres usar el logo) -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
 </head>
 <body>
-  <a href="#contenido" class="skip">Saltar al contenido</a>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
+  <!-- BARRA SUPERIOR -->
   <header class="site-header">
-    <div class="header-container">
-      <img src="assets/logo.png" alt="Agro Connections" class="logo">
-      <div class="title-block">
-        <h1>Agro Connections S.A. de C.V.</h1>
-        <p class="subtitle">Más que un reclutamiento, una conexión confiable</p>
+    <div class="header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Agro Connections" class="logo" />
+        <div>
+          <h1>Agro Connections S.A. de C.V.</h1>
+          <p>Más que un reclutamiento, una conexión confiable</p>
+        </div>
       </div>
-    </div>
 
-    <nav id="main-nav" class="nav" aria-label="Navegación principal">
-      <button type="button" data-section="inicio">Inicio</button>
-      <button type="button" data-section="evidencia">Evidencia</button>
-      <button type="button" data-section="registro">Registro</button>
-      <button type="button" data-section="faq">Preguntas</button>
-      <button type="button" data-section="contacto">Contacto</button>
-    </nav>
+      <!-- MENÚ -->
+      <nav class="main-nav">
+        <!-- OJO: data-section debe coincidir con los IDs de las secciones -->
+        <button class="nav-link active" data-section="inicio">Inicio</button>
+        <button class="nav-link" data-section="evidencia">Evidencia</button>
+        <button class="nav-link" data-section="registro">Registro</button>
+        <button class="nav-link" data-section="preguntas">Preguntas</button>
+        <button class="nav-link" data-section="contacto">Contacto</button>
+      </nav>
+    </div>
   </header>
 
-  <main id="contenido">
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="site-main">
     <!-- INICIO -->
-    <section id="inicio" class="section active" aria-labelledby="tit-inicio">
-      <h2 id="tit-inicio">Bienvenido</h2>
-      <p>
-        Agro Connections es el enlace entre trabajadores y contratistas agrícolas en Estados Unidos,
-        con enfoque en actividades como la <strong>cosecha de blueberries</strong>.
-      </p>
-      <ul class="bullets">
-        <li>Proceso claro y transparente.</li>
-        <li>Comunicación directa y acompañamiento.</li>
-        <li>Énfasis en seguridad y cumplimiento.</li>
-      </ul>
-      <div class="cta">
-        <button type="button" class="btn" data-section="registro">Quiero registrarme</button>
-        <button type="button" class="btn-outline" data-section="evidencia">Ver evidencias</button>
+    <section id="inicio" class="page-section is-visible">
+      <div class="card">
+        <h2>Bienvenido</h2>
+        <p>
+          Agro Connections es el enlace entre trabajadores y contratistas
+          agrícolas en Estados Unidos, con enfoque en actividades como la
+          <strong>cosecha de blueberries</strong>.
+        </p>
+        <ul>
+          <li>Proceso claro y transparente.</li>
+          <li>Comunicación directa y acompañamiento.</li>
+          <li>Énfasis en seguridad y cumplimiento.</li>
+        </ul>
+
+        <div class="actions-row">
+          <button class="btn primary" data-section="registro">
+            Quiero registrarme
+          </button>
+          <button class="btn secondary" data-section="evidencia">
+            Ver evidencias
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- EVIDENCIA -->
-    <section id="evidencia" class="section" aria-labelledby="tit-evidencia">
-      <h2 id="tit-evidencia">Evidencia</h2>
-      <p>
-        Esta galería te permite mostrar fotografías o videos de actividades agrícolas para generar confianza.
-        Por ahora funciona de forma local (en el navegador); más adelante se puede enlazar con Google Drive.
-      </p>
+    <section id="evidencia" class="page-section">
+      <div class="card">
+        <h2>Evidencia (Drive + respaldo local)</h2>
+        <p>
+          Aquí podrás mostrar fotografías, videos y documentos que respalden la
+          seriedad del proceso: viajes anteriores, campos de trabajo, contrato
+          firmado, etc.
+        </p>
 
-      <form id="upload-form" class="uploader">
-        <input type="file" id="fileInput" accept="image/*,video/*">
-        <input type="text" id="fileDesc" placeholder="Descripción (opcional)">
-        <button type="submit" class="btn">Agregar a galería</button>
-      </form>
+        <p class="note">
+          * En esta versión ligera los archivos se gestionan por Google Drive.
+          Puedes compartir un enlace de carpeta o incrustar un iframe más
+          adelante.
+        </p>
 
-      <div id="gallery" class="gallery" aria-live="polite"></div>
+        <div class="drive-box">
+          <label for="link-drive">Enlace de tu carpeta de Drive:</label>
+          <input
+            id="link-drive"
+            type="url"
+            placeholder="https://drive.google.com/…"
+          />
+          <button class="btn secondary">Abrir carpeta</button>
+        </div>
+      </div>
     </section>
 
     <!-- REGISTRO -->
-    <section id="registro" class="section" aria-labelledby="tit-registro">
-      <h2 id="tit-registro">Registro de interesados</h2>
+    <section id="registro" class="page-section">
+      <div class="card">
+        <h2>Registro multipaso</h2>
 
-      <div class="steps">
-        <button type="button" class="step-btn current" data-step="1">1. Datos</button>
-        <button type="button" class="step-btn" data-step="2">2. Documentos</button>
-        <button type="button" class="step-btn" data-step="3">3. Confirmación</button>
+        <p>
+          Llena tu información básica para que podamos contactarte y verificar
+          tu perfil para las vacantes disponibles.
+        </p>
+
+        <form class="wizard-form">
+          <div class="form-step is-visible" data-step="1">
+            <h3>1. Datos personales</h3>
+
+            <label>
+              Nombre completo
+              <input type="text" name="nombre" required />
+            </label>
+
+            <div class="row">
+              <label>
+                Edad
+                <input type="number" name="edad" min="18" />
+              </label>
+
+              <label>
+                Teléfono
+                <input type="tel" name="telefono" />
+              </label>
+            </div>
+
+            <label>
+              Correo electrónico
+              <input type="email" name="correo" />
+            </label>
+
+            <label>
+              Perfil o experiencia
+              <select name="perfil">
+                <option value="">Selecciona una opción</option>
+                <option value="sin-exp">Sin experiencia previa</option>
+                <option value="blueberries">Cosecha de blueberries</option>
+                <option value="otros-frutales">Otros cultivos frutales</option>
+                <option value="mixto">Mixto agrícola / otros trabajos</option>
+              </select>
+            </label>
+
+            <div class="row">
+              <label>
+                ¿Has trabajado en EE.UU. antes?
+                <select name="usa_experience">
+                  <option value="">Selecciona</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </label>
+
+              <label>
+                ¿Deportaciones o tickets en EE.UU.?
+                <select name="usa_tickets">
+                  <option value="">Selecciona</option>
+                  <option value="no">No</option>
+                  <option value="si">Sí</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="actions-row end">
+              <button class="btn primary" type="button" data-next-step="2">
+                Siguiente
+              </button>
+            </div>
+          </div>
+
+          <div class="form-step" data-step="2">
+            <h3>2. Documentos</h3>
+
+            <p>
+              Por ahora solo se solicitarán los documentos durante la entrevista
+              y por mensajería. Esta sección se puede conectar después con
+              Google Drive para subir archivos.
+            </p>
+
+            <ul>
+              <li>Pasaporte vigente.</li>
+              <li>INE.</li>
+              <li>Fotografías para visa.</li>
+            </ul>
+
+            <div class="actions-row space-between">
+              <button class="btn secondary" type="button" data-prev-step="1">
+                Regresar
+              </button>
+              <button class="btn primary" type="button" data-next-step="3">
+                Siguiente
+              </button>
+            </div>
+          </div>
+
+          <div class="form-step" data-step="3">
+            <h3>3. Revisión y envío</h3>
+
+            <p>
+              Revisa que tus datos sean correctos. Una vez enviado, el equipo de
+              Agro Connections se pondrá en contacto contigo para agendar
+              entrevista.
+            </p>
+
+            <label>
+              Comentarios adicionales
+              <textarea name="comentarios" rows="4"></textarea>
+            </label>
+
+            <div class="actions-row space-between">
+              <button class="btn secondary" type="button" data-prev-step="2">
+                Regresar
+              </button>
+              <button class="btn primary" type="submit">
+                Enviar registro
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <form id="register-form">
-        <!-- PASO 1 -->
-        <div class="step step-1">
-          <label>Nombre completo
-            <input name="nombre" required autocomplete="name">
-          </label>
-          <label>Teléfono
-            <input name="telefono" required inputmode="tel">
-          </label>
-          <label>Correo electrónico
-            <input name="correo" type="email" required autocomplete="email">
-          </label>
-          <label>¿Has trabajado en EE.UU. antes?
-            <select name="experiencia_eeuu" required>
-              <option value="">Seleccione…</option>
-              <option>Sí</option>
-              <option>No</option>
-            </select>
-          </label>
-
-          <div class="actions">
-            <button type="button" class="btn next" data-next="2">Siguiente</button>
-          </div>
-        </div>
-
-        <!-- PASO 2 -->
-        <div class="step step-2 hidden">
-          <label>Identificación (imagen o PDF)
-            <input type="file" name="id_file" accept="image/*,application/pdf" required>
-          </label>
-          <label>Comprobante de domicilio (imagen o PDF)
-            <input type="file" name="dom_file" accept="image/*,application/pdf" required>
-          </label>
-
-          <div class="actions">
-            <button type="button" class="btn-outline prev" data-prev="1">Atrás</button>
-            <button type="button" class="btn next" data-next="3">Siguiente</button>
-          </div>
-        </div>
-
-        <!-- PASO 3 -->
-        <div class="step step-3 hidden">
-          <p>Revisa tus datos antes de enviar. Se generará un comprobante descargable.</p>
-          <div id="preview" class="preview"></div>
-          <div class="actions">
-            <button type="button" class="btn-outline prev" data-prev="2">Atrás</button>
-            <button type="submit" class="btn">Enviar registro</button>
-          </div>
-        </div>
-      </form>
-
-      <div id="pdfLink" class="pdf-link hidden" role="status"></div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
-    <section id="faq" class="section" aria-labelledby="tit-faq">
-      <h2 id="tit-faq">Preguntas frecuentes</h2>
+    <!-- PREGUNTAS -->
+    <section id="preguntas" class="page-section">
+      <div class="card">
+        <h2>Preguntas frecuentes</h2>
 
-      <details>
-        <summary>¿En qué tipo de trabajos agrícolas se enfoca la conexión?</summary>
-        <p>Principalmente en labores de cosecha de berries (blueberries) y otras actividades de campo según temporada.</p>
-      </details>
+        <details>
+          <summary>¿En qué consiste el trabajo en la cosecha de blueberries?</summary>
+          <p>
+            Principalmente recolección en campo, selección de fruta y apoyo en
+            actividades relacionadas. Las condiciones específicas se explican en
+            la entrevista y en el contrato.
+          </p>
+        </details>
 
-      <details>
-        <summary>¿Agro Connections es el contratista?</summary>
-        <p>No. Agro Connections funge como enlace y apoyo en el proceso de reclutamiento y organización.</p>
-      </details>
+        <details>
+          <summary>¿Quién cubre el transporte y hospedaje?</summary>
+          <p>
+            El proceso puede incluir inversión personal inicial para trámites y
+            gastos de viaje. Los detalles se explican claramente antes de
+            firmar cualquier documento.
+          </p>
+        </details>
 
-      <details>
-        <summary>¿Cuáles son los pasos del proceso?</summary>
-        <p>Registro → revisión de información → comunicación con el contratista → seguimiento.</p>
-      </details>
+        <details>
+          <summary>¿Qué requisitos migratorios necesito?</summary>
+          <p>
+            Se revisan pasaporte vigente, visa correspondiente y la
+            documentación que exija la legislación de Estados Unidos y México.
+          </p>
+        </details>
+      </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section" aria-labelledby="tit-contacto">
-      <h2 id="tit-contacto">Contacto</h2>
-      <p><strong>Teléfono / WhatsApp:</strong> 483 119 0497</p>
-      <p><strong>Correo:</strong> contacto@agroconnections.mx</p>
+    <section id="contacto" class="page-section">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>
+          Para dudas o seguimiento, puedes escribirnos por WhatsApp o correo
+          electrónico.
+        </p>
+
+        <ul>
+          <li>📞 Teléfono / WhatsApp México: <strong>483 119 0497</strong></li>
+          <li>✉️ Correo: <strong>contacto@agroconnections.mx</strong> (ejemplo)</li>
+        </ul>
+      </div>
     </section>
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
-    <small>
-      © <span id="year"></span> Agro Connections S.A. de C.V. ·
+    <p>
+      © Agro Connections S.A. de C.V. ·
       <a href="aviso-legal.html">Aviso legal</a> ·
       <a href="privacidad.html">Privacidad</a>
-    </small>
+    </p>
   </footer>
 
-  <script src="js/app.js" defer></script>
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
 </body>
 </html>
+
