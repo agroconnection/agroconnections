@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agro Connections S.A. de C.V.</title>
+  <meta name="description" content="Reclutamiento agrícola confiable para trabajos en Estados Unidos, con enfoque en cosecha de blueberries.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <a href="#contenido" class="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="header-container">
+      <img src="assets/logo.png" alt="Agro Connections" class="logo">
+      <div class="title-block">
+        <h1>Agro Connections S.A. de C.V.</h1>
+        <p class="subtitle">Más que un reclutamiento, una conexión confiable</p>
+      </div>
+    </div>
+
+    <nav id="main-nav" class="nav" aria-label="Navegación principal">
+      <button type="button" data-section="inicio">Inicio</button>
+      <button type="button" data-section="evidencia">Evidencia</button>
+      <button type="button" data-section="registro">Registro</button>
+      <button type="button" data-section="faq">Preguntas</button>
+      <button type="button" data-section="contacto">Contacto</button>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- INICIO -->
+    <section id="inicio" class="section active" aria-labelledby="tit-inicio">
+      <h2 id="tit-inicio">Bienvenido</h2>
+      <p>
+        Agro Connections es el enlace entre trabajadores y contratistas agrícolas en Estados Unidos,
+        con enfoque en actividades como la <strong>cosecha de blueberries</strong>.
+      </p>
+      <ul class="bullets">
+        <li>Proceso claro y transparente.</li>
+        <li>Comunicación directa y acompañamiento.</li>
+        <li>Énfasis en seguridad y cumplimiento.</li>
+      </ul>
+      <div class="cta">
+        <button type="button" class="btn" data-section="registro">Quiero registrarme</button>
+        <button type="button" class="btn-outline" data-section="evidencia">Ver evidencias</button>
+      </div>
+    </section>
+
+    <!-- EVIDENCIA -->
+    <section id="evidencia" class="section" aria-labelledby="tit-evidencia">
+      <h2 id="tit-evidencia">Evidencia</h2>
+      <p>
+        Esta galería te permite mostrar fotografías o videos de actividades agrícolas para generar confianza.
+        Por ahora funciona de forma local (en el navegador); más adelante se puede enlazar con Google Drive.
+      </p>
+
+      <form id="upload-form" class="uploader">
+        <input type="file" id="fileInput" accept="image/*,video/*">
+        <input type="text" id="fileDesc" placeholder="Descripción (opcional)">
+        <button type="submit" class="btn">Agregar a galería</button>
+      </form>
+
+      <div id="gallery" class="gallery" aria-live="polite"></div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="registro" class="section" aria-labelledby="tit-registro">
+      <h2 id="tit-registro">Registro de interesados</h2>
+
+      <div class="steps">
+        <button type="button" class="step-btn current" data-step="1">1. Datos</button>
+        <button type="button" class="step-btn" data-step="2">2. Documentos</button>
+        <button type="button" class="step-btn" data-step="3">3. Confirmación</button>
+      </div>
+
+      <form id="register-form">
+        <!-- PASO 1 -->
+        <div class="step step-1">
+          <label>Nombre completo
+            <input name="nombre" required autocomplete="name">
+          </label>
+          <label>Teléfono
+            <input name="telefono" required inputmode="tel">
+          </label>
+          <label>Correo electrónico
+            <input name="correo" type="email" required autocomplete="email">
+          </label>
+          <label>¿Has trabajado en EE.UU. antes?
+            <select name="experiencia_eeuu" required>
+              <option value="">Seleccione…</option>
+              <option>Sí</option>
+              <option>No</option>
+            </select>
+          </label>
+
+          <div class="actions">
+            <button type="button" class="btn next" data-next="2">Siguiente</button>
+          </div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div class="step step-2 hidden">
+          <label>Identificación (imagen o PDF)
+            <input type="file" name="id_file" accept="image/*,application/pdf" required>
+          </label>
+          <label>Comprobante de domicilio (imagen o PDF)
+            <input type="file" name="dom_file" accept="image/*,application/pdf" required>
+          </label>
+
+          <div class="actions">
+            <button type="button" class="btn-outline prev" data-prev="1">Atrás</button>
+            <button type="button" class="btn next" data-next="3">Siguiente</button>
+          </div>
+        </div>
+
+        <!-- PASO 3 -->
+        <div class="step step-3 hidden">
+          <p>Revisa tus datos antes de enviar. Se generará un comprobante descargable.</p>
+          <div id="preview" class="preview"></div>
+          <div class="actions">
+            <button type="button" class="btn-outline prev" data-prev="2">Atrás</button>
+            <button type="submit" class="btn">Enviar registro</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="pdfLink" class="pdf-link hidden" role="status"></div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section id="faq" class="section" aria-labelledby="tit-faq">
+      <h2 id="tit-faq">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿En qué tipo de trabajos agrícolas se enfoca la conexión?</summary>
+        <p>Principalmente en labores de cosecha de berries (blueberries) y otras actividades de campo según temporada.</p>
+      </details>
+
+      <details>
+        <summary>¿Agro Connections es el contratista?</summary>
+        <p>No. Agro Connections funge como enlace y apoyo en el proceso de reclutamiento y organización.</p>
+      </details>
+
+      <details>
+        <summary>¿Cuáles son los pasos del proceso?</summary>
+        <p>Registro → revisión de información → comunicación con el contratista → seguimiento.</p>
+      </details>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section" aria-labelledby="tit-contacto">
+      <h2 id="tit-contacto">Contacto</h2>
+      <p><strong>Teléfono / WhatsApp:</strong> 483 119 0497</p>
+      <p><strong>Correo:</strong> contacto@agroconnections.mx</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>
+      © <span id="year"></span> Agro Connections S.A. de C.V. ·
+      <a href="aviso-legal.html">Aviso legal</a> ·
+      <a href="privacidad.html">Privacidad</a>
+    </small>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
