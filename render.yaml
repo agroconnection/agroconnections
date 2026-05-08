@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: control-financiero-nube
+    env: python
+    plan: free
+    healthCheckPath: /salud
+    buildCommand: pip install -r requirements_web.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app_web_nube:app
+    envVars:
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_ORGANIZATION_ID
+        sync: false
+      - key: SUPABASE_BUCKET
+        value: financial-documents
